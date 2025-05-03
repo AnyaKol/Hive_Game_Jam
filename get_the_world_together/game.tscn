@@ -1,13 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmn2w6jg13fv1"]
+[gd_scene load_steps=7 format=3 uid="uid://dmn2w6jg13fv1"]
 
 [ext_resource type="Script" uid="uid://bto6073arruos" path="res://parallax_layer.gd" id="1_7jktm"]
 [ext_resource type="Texture2D" uid="uid://bgxotbhwpdb3t" path="res://map.jpg" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://b1x211dxvpg5e" path="res://back.jpg" id="1_fc0e3"]
+[ext_resource type="Script" uid="uid://bfddkpmr0vpsn" path="res://main.gd" id="1_ryrav"]
 [ext_resource type="Texture2D" uid="uid://crot410wa2p46" path="res://hole.png" id="3_7jktm"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_eow3j"]
 
 [node name="game" type="Area2D"]
+script = ExtResource("1_ryrav")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -44,67 +46,83 @@ color = Color(0.537255, 0.529412, 1, 1)
 polygon = PackedVector2Array(41, 272, 179, 238, 270, 0, 537, 156, 189, 308)
 
 [node name="5" type="Polygon2D" parent="."]
+visible = false
 color = Color(1, 0.521569, 0.537255, 1)
 polygon = PackedVector2Array(189, 308, 537, 156, 716, 252, 611, 273, 466, 363, 418, 297)
 
 [node name="6" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.560784, 1, 0.568627, 1)
 polygon = PackedVector2Array(270, 0, 384, 0, 556, 75, 650, 0, 716, 252, 537, 156)
 
 [node name="7" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.882353, 0.556863, 1, 1)
 polygon = PackedVector2Array(384, 0, 556, 75, 650, 0)
 
 [node name="8" type="Polygon2D" parent="."]
+visible = false
 color = Color(1, 0.862745, 0.541176, 1)
 polygon = PackedVector2Array(855, 327, 716, 252, 650, 0, 999, 0, 999, 231, 819, 183)
 
 [node name="9" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.552941, 1, 0.901961, 1)
 polygon = PackedVector2Array(716, 252, 855, 327, 873, 500, 611, 273)
 
 [node name="10" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.909804, 1, 0.6, 1)
 polygon = PackedVector2Array(819, 183, 999, 231, 873, 500, 855, 327)
 
 [node name="11" type="Polygon2D" parent="."]
+visible = false
 position = Vector2(-359, -168)
 color = Color(0.517647, 0.878431, 1, 1)
 polygon = PackedVector2Array(548, 476, 505, 508, 488, 566, 657, 616, 695, 552)
 
 [node name="12" type="Polygon2D" parent="."]
+visible = false
 color = Color(1, 0.545098, 0.854902, 1)
 polygon = PackedVector2Array(336, 384, 466, 363, 418, 297, 189, 308)
 
 [node name="13" type="Polygon2D" parent="."]
+visible = false
 position = Vector2(53, -237)
 color = Color(0.878431, 1, 0.560784, 1)
 polygon = PackedVector2Array(-54, 737, -54, 613, 76, 635, 218, 737)
 
 [node name="14" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.847059, 0.87451, 0.87451, 1)
 polygon = PackedVector2Array(339, 475, 298, 448, 129, 398, 271, 500)
 
 [node name="15" type="Polygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(873, 500, 999, 500, 999, 231)
 
 [node name="16" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.54902, 0.560784, 0.913725, 1)
 polygon = PackedVector2Array(873, 500, 611, 273, 466, 363, 548, 450, 651, 413, 763, 500)
 
 [node name="17" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.580392, 1, 0.647059, 1)
 polygon = PackedVector2Array(763, 500, 651, 413, 548, 450, 528, 500)
 
 [node name="18" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.364706, 1, 0.843137, 1)
 polygon = PackedVector2Array(339, 475, 298, 448, 336, 384, 466, 363, 455, 500)
 
 [node name="19" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.913725, 0.501961, 1, 1)
 polygon = PackedVector2Array(271, 500, 339, 475, 455, 500)
 
 [node name="20" type="Polygon2D" parent="."]
+visible = false
 color = Color(0.843137, 1, 0.584314, 1)
 polygon = PackedVector2Array(455, 500, 466, 363, 548, 450, 528, 500)
 
