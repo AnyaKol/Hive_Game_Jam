@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfbt63wfvoubh"]
+
+[ext_resource type="Texture2D" uid="uid://d07mukshhrykp" path="res://pexels-krisof-1252890.jpg" id="1_0y3qu"]
+[ext_resource type="Script" uid="uid://d0lmbtmivyxy6" path="res://drag_drop.gd" id="2_gh2sy"]
+[ext_resource type="Texture2D" uid="uid://do54ohug5oxgb" path="res://mammut-tum.png" id="3_1qjom"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nn4hm"]
+size = Vector2(180, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0y3qu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Piece" type="StaticBody2D" parent="."]
+top_level = true
+z_index = 1
+position = Vector2(468, 425)
+input_pickable = true
+script = ExtResource("2_gh2sy")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piece"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_nn4hm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Piece"]
+z_index = 1
+position = Vector2(1, 3)
+texture = ExtResource("3_1qjom")
+
+[node name="Button" type="Button" parent="Piece"]
+offset_left = -91.0
+offset_top = -57.0
+offset_right = 93.0
+offset_bottom = 66.0
+keep_pressed_outside = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -4.0
+offset_top = 3.0
+offset_right = 1149.0
+offset_bottom = 649.0
+mouse_filter = 2
+texture = ExtResource("1_0y3qu")
+expand_mode = 2
+
+[node name="Dropspot" type="Area2D" parent="."]
+position = Vector2(68, 52)
+input_pickable = false
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dropspot"]
+shape = SubResource("RectangleShape2D_0y3qu")
+
+[node name="Dropspot2" type="Area2D" parent="."]
+position = Vector2(814, 149)
+input_pickable = false
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dropspot2"]
+shape = SubResource("RectangleShape2D_0y3qu")
+
+[connection signal="input_event" from="Piece" to="Piece" method="_on_Piece_input_event"]
+[connection signal="button_down" from="Piece/Button" to="Piece" method="_on_button_button_down"]
+[connection signal="button_up" from="Piece/Button" to="Piece" method="_on_button_button_up"]
